@@ -3,6 +3,7 @@
 A deep learning web app that diagnoses plant leaf diseases from a photo.
 
 **🔗 Live demo:** https://plant-disease-detector-3sf9lac3pnclgvxu6wqzbm.streamlit.app
+![App screenshot](screenshot.png)
 
 ## What it does
 
