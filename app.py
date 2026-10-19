@@ -43,11 +43,11 @@ if file:
 
     best = pretty(class_names[top.indices[0]])
     conf = top.values[0].item()
-if conf >= 0.80:
-    st.success(f"Prediction: **{best}** ({conf:.1%} confident)")
-else:
-    st.warning(f"Not sure ({conf:.1%}). Best guess: **{best}**. "
-               "This model only knows 14 crops and works best on a single leaf on a plain background.")
+    if conf >= 0.80:
+        st.success(f"Prediction: **{best}** ({conf:.1%} confident)")
+    else:
+        st.warning(f"Not sure ({conf:.1%}). Best guess: **{best}**. "
+                   "This model only knows 14 crops and works best on a single leaf on a plain background.")
 
     st.subheader("Top 3 guesses")
     for p, i in zip(top.values, top.indices):
